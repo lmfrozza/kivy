@@ -9,4 +9,7 @@ GUI = Builder.load_file("tela.kv")
 class Webscr(App):
     def build(self):
         return GUI
+    def nbgomes(self):
+        teste1 = str(self.ids.teste1.text)
+        print(teste1)
 Webscr().run()
