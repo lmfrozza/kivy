@@ -10,12 +10,13 @@ BoxLayout:
     BoxLayout:
         orientation: "horizontal"
         padding: 20
+        spacing: 10
         TextInput: 
             id: teste1
-            size_hint: (1, 1)
+            multiline: False
         Button:
             text: 'Procurar!'
-            on_press: print("Button clicked")
+            on_press: root.nbgomes()
             size_hint: (0.25, 1)
     BoxLayout: 
         orientation: "vertical"
