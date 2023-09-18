@@ -1,2 +1,25 @@
-Label:
-    text: 'oi tudo certo kk?'
+BoxLayout:
+    orientation: "vertical"
+    padding: 150
+    Label:  
+        text: 'Game Price Scraper'
+        font_size: 20 
+    Label:  
+        text: 'Pesquise o nome do jogo: ' 
+        text_size: self.size
+    BoxLayout:
+        orientation: "horizontal"
+        padding: 20
+        TextInput: 
+            id: teste1
+            size_hint: (1, 1)
+        Button:
+            text: 'Procurar!'
+            on_press: print("Button clicked")
+            size_hint: (0.25, 1)
+    BoxLayout: 
+        orientation: "vertical"
+        padding: 20 
+        Label: 
+            id: dfjogos
+            text: " "
