@@ -20,7 +20,6 @@ class Webscr(App):
         # Obter o texto do InputText
         text_input = self.root.ids.teste1
         texto = text_input.text
-    
         # Atualizar o texto do rótulo dfjogos
         dfjogos_label = self.root.ids.dfjogos
         dfjogos_label.text = texto
