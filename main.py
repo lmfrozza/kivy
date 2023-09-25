@@ -37,7 +37,8 @@ class Webscr(App):
     # Atualizar o texto do rótulo dfjogos
     dfjogos_label = self.root.ids.dfjogos
     dfjogos_label.text = (f'{nome_jogo} Steam: {preco_steam_texto} Xbox: {preco_microsoft_texto} PSN: {preco_PSN} GOG: {preco_GOG}')
-
+    #titulochange = self.root.ids.titulo
+    #titulochange.text = (nome_jogo)
 
 edge_options = Options()
 edge_options.add_argument('--headless')
@@ -46,6 +47,7 @@ edge_options.add_argument('--disable-gpu')
 browser = wd.Edge(options=edge_options)  #options=edge_options
 
 def Buscar():
+  global nome_jogo
   global preco_microsoft_texto
   global preco_steam_texto
   # Abre o link
