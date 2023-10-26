@@ -88,7 +88,7 @@ def Steam():
 def microsoft():
   global preco_microsoft_texto
   
-  browser.get('https://www.microsoft.com/pt-br/store/collections/pcgavtaz')
+  browser.get('https://www.xbox.com/pt-BR')
   botao_microsoft = browser.find_element('id', 'search')
   botao_microsoft.click()
   sleep(3)
@@ -116,6 +116,7 @@ def gog():
   global preco_GOG
 
   browser.get('https://www.gog.com/pt/games')
+  browser.find_element('xpath', '//*[@id="Catalog"]/div/div[1]/filters-wrapper/div/div[1]/div[2]/div/div/div/filters/div/collapsible-section/div[2]/div/label/input').click()
   xpath= '//*[@id="catalogHeader"]/search/form/input'
   pesquisa_GOG= browser.find_element('xpath', xpath)
   try:
@@ -124,8 +125,6 @@ def gog():
   except: 
     pesquisa_GOG.send_keys(Pesquina)
     sleep(3)
-
-    
   try:
     preco= browser.find_element('xpath', '//*[@id="Catalog"]/div/div[2]/paginated-products-grid/div/product-tile/a/div[2]/div[2]/div/product-price/price-value/span[1]')
     preco_GOG = preco.text
